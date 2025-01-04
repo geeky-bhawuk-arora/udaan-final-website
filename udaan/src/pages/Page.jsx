@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import './Page.css';
-import Video from '../assets/FLYIGHTQUEST.mp4';
+import Video from '../assets/FlightQuest.mp4';
 
 const Page = () => {
     const videoRef = useRef(null);
