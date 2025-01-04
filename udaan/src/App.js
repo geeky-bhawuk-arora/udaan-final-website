@@ -42,7 +42,7 @@ function App() {
                         <Nav className='me-auto justify-content-end w-100 italic'>
                             <Nav.Link href='/' className='text-uppercase'>Home</Nav.Link>
                             <Nav.Link href='/page' className='text-uppercase'>Events</Nav.Link>
-                            <Nav.Link href='/achivments' className='text-uppercase'>Achievements</Nav.Link>
+                            <Nav.Link href='/achievements' className='text-uppercase'>Achievements</Nav.Link>
                             <Nav.Link href='/about' className='text-uppercase'>About us</Nav.Link>
                             <Nav.Link href='/contact' className='text-uppercase'>Get in touch</Nav.Link>
                         </Nav>
@@ -62,7 +62,7 @@ function App() {
                 {/* Routes */}
                 <Routes>
                     <Route path='/' element={<Home />} />
-                    <Route path='/achivments' element={<Courses />} />
+                    <Route path='/achievements' element={<Courses />} />
                     <Route path='/about' element={<About />} />
                     <Route path='/page' element={<Page />} />
                     <Route path='/contact' element={<Contact />} />
