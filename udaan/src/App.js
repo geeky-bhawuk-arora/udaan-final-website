@@ -122,7 +122,10 @@ function App() {
         </div>
         <div className='bg-body-tertiary'>
           <div className='container'>
-            <p className='p-3 m-0 text-center'>copyright @ made by Udaan Club</p>
+              <p className="p-3 m-0 text-center bg-gray-800 text-white text-sm font-semibold">
+      &copy; {new Date().getFullYear()} Made with ❤️ by Udaan Club
+    </p>
+
           </div>
         </div>
       </footer>
