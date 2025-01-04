@@ -7,43 +7,70 @@ import Home from './pages/Home/Home';
 import Courses from './pages/Courses/Courses';
 import About from './pages/About/About';
 import Contact from './pages/Contact/Contact';
+import Page from './pages/Page';
+import Marquee from './components/marquee';
+
+const marqueeVariants = {
+    animate: {
+        x: [0, -1035],
+        transition: {
+            x: {
+                repeat: Infinity,
+                repeatType: "loop",
+                duration: 5,
+                ease: "linear",
+            },
+        },
+    },
+};
 
 function App() {
-  return (
-    <div className='bg-gray-300'>
-      <Navbar expand="lg" className='position-absolute w-100'>
-        <Container>
-          <Navbar.Brand>
-            <Link to="/" className='navbar-brand d-flex align-items-center'>
-          
-              <div className=' font-bold text-3xl hover:text-orange-500 italic text-sky-400'>
-                UDAAN
-          
-              </div>
-            </Link>
-          </Navbar.Brand>
-          <Navbar.Toggle aria-controls='basic-navbar-nav' className='bg-light' />
-          <Navbar.Collapse id='basic-navbar-nav'>
-            <Nav className='me-auto justify-content-end w-100 italic'>
-              <Nav.Link href='/' className='text-uppercase'>Home</Nav.Link>
-              <Nav.Link href='/achivments' className='text-uppercase'>Achievements</Nav.Link>
-              <Nav.Link href='/about' className='text-uppercase'>About us</Nav.Link>
-            
-              <Nav.Link href='/contact' className='text-uppercase'>Get in touch</Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
+    return (
+        <div className='bg-gray-300'>
+            {/* Fixed Navbar */}
+            <Navbar expand="lg" className='position-fixed w-100' style={{ top: 0, zIndex: 1000, backgroundColor: '#0048BA' }}>
+                <Container>
+                    <Navbar.Brand>
+                        <Link to="/" className='navbar-brand d-flex align-items-center'>
+                            <div className='font-bold text-3xl hover:text-orange-500 italic text-sky-400'>
+                                UDAAN
+                            </div>
+                        </Link>
+                    </Navbar.Brand>
+                    <Navbar.Toggle aria-controls='basic-navbar-nav' className='bg-light' />
+                    <Navbar.Collapse id='basic-navbar-nav'>
+                        <Nav className='me-auto justify-content-end w-100 italic'>
+                            <Nav.Link href='/' className='text-uppercase'>Home</Nav.Link>
+                            <Nav.Link href='/page' className='text-uppercase'>Events</Nav.Link>
+                            <Nav.Link href='/achivments' className='text-uppercase'>Achievements</Nav.Link>
+                            <Nav.Link href='/about' className='text-uppercase'>About us</Nav.Link>
+                            <Nav.Link href='/contact' className='text-uppercase'>Get in touch</Nav.Link>
+                        </Nav>
+                    </Navbar.Collapse>
+                </Container>
+            </Navbar>
 
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/achivments' element={<Courses />} />
-        <Route path='/about' element={<About />} />
-       
-        <Route path='/contact' element={<Contact />} />
-      </Routes>
+            {/* Adding space below the Navbar */}
+            <div style={{ paddingTop: '70px' }}>
+                {/* Marquee Component */}
+                <Marquee>
+                    <p className="text-lg font-semibold text-center text-orange-500">
+                        Welcome to UDAAN Aeromodelling Club! | Upcoming Events: Flight Workshop - Jan 15 | Stay Tuned for More Updates!
+                    </p>
+                </Marquee>
 
-      <footer>
+                {/* Routes */}
+                <Routes>
+                    <Route path='/' element={<Home />} />
+                    <Route path='/achivments' element={<Courses />} />
+                    <Route path='/about' element={<About />} />
+                    <Route path='/page' element={<Page />} />
+                    <Route path='/contact' element={<Contact />} />
+                </Routes>
+            </div>
+
+            {/* Footer */}
+            <footer>
         <div className='container my-5'>
           <div className='row d-flex justify-content-between align-items-center'>
             <div className='col-md-4 mb-4 '>
@@ -99,8 +126,8 @@ function App() {
           </div>
         </div>
       </footer>
-    </div>
-  );
+        </div>
+    );
 }
 
 export default App;

@@ -2,6 +2,7 @@ import React from 'react';
 import './Home.css';
 import ChooseSection from '../../components/ChooseSection/ChooseSection';
 import { Card } from 'react-bootstrap';
+import Marquee from '../../components/marquee';
  
 const blogs = [
     {
@@ -40,7 +41,7 @@ function Home() {
               
             </div>
         </header>
-
+        {/* <Marquee/> */}
         
 
         <div className='py-5 bg-gray-300'>
