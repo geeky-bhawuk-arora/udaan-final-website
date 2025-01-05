@@ -175,9 +175,9 @@ function Contact() {
   
 
 </form>
-</div>
 
-        <div className='bg-dark text-light p-5'>
+
+        {/*  </div><div className='bg-dark text-light p-5'>
             <div className='container'>
                 <h2 className='text-center mb-5'>Credit TO WEBMASTER TEAM</h2>
                 <div className='row g-4'>
@@ -205,7 +205,7 @@ function Contact() {
                 </div>
             </div>
         </div>
-    </div>
+    </div>  */}
   )
 }
 
