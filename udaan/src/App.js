@@ -7,22 +7,6 @@ import Home from './pages/Home/Home';
 import Courses from './pages/Courses/Courses';
 import About from './pages/About/About';
 import Contact from './pages/Contact/Contact';
-import Page from './pages/Page';
-import Marquee from './components/marquee';
-
-const marqueeVariants = {
-    animate: {
-        x: [0, -1035],
-        transition: {
-            x: {
-                repeat: Infinity,
-                repeatType: "loop",
-                duration: 5,
-                ease: "linear",
-            },
-        },
-    },
-};
 
 function App() {
     return (
@@ -52,19 +36,14 @@ function App() {
 
             {/* Adding space below the Navbar */}
             <div style={{ paddingTop: '70px' }}>
-                {/* Marquee Component */}
-                <Marquee>
-                    <p className="text-lg font-semibold text-center text-orange-500">
-                        Welcome to UDAAN Aeromodelling Club! | Upcoming Events: Flight Workshop - Jan 15 | Stay Tuned for More Updates!
-                    </p>
-                </Marquee>
+              
 
                 {/* Routes */}
                 <Routes>
                     <Route path='/' element={<Home />} />
                     <Route path='/achievements' element={<Courses />} />
                     <Route path='/about' element={<About />} />
-                    <Route path='/page' element={<Page />} />
+                    {/* <Route path='/page' element={<Page />} /> */}
                     <Route path='/contact' element={<Contact />} />
                 </Routes>
             </div>
